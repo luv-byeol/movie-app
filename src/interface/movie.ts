@@ -4,4 +4,5 @@ export interface MovieType {
     title: string;
     summary: string;
     genres: string[];
+    year: number;
 }
