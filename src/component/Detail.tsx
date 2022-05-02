@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { RouteComponentProps } from "react-router-dom";
-import { DetailType, MatchParams } from "interface/detail";
+import { DetailType } from "interface/detail";
+import { useParams } from "react-router-dom";
 
-function Detail({ match }: RouteComponentProps<MatchParams>) {
-    const { id } = match.params;
+function Detail() {
+    const { id } = useParams<{id:string}>();
     const [movies, setMovies] = useState<DetailType>();
 
     useEffect(() => {
